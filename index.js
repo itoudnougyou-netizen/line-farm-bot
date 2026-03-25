@@ -17,7 +17,7 @@ const client = new line.Client(config);
 
 // Google Sheets設定
 const auth = new google.auth.GoogleAuth({
-  keyFile: 'credentials.json', // ←あとで用意
+  credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
